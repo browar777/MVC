@@ -10,8 +10,7 @@ class App
 	public function __construct()
 	{
 		//funkcja parseUrl() znajduje sie ponizej
-		$url = $this->parseUrl();  
-
+		$url = $this->parseUrl(); 
 
 
 
@@ -61,7 +60,7 @@ class App
 	{
 		if(isset($_GET['url']))
 		{
-			return $url = explode('/', filter_var( rtrim($_GET['url'],"/") , FILTER_SANITIZE_URL ));
+			return $url = explode('/',  rtrim($_GET['url'],"/") );
 		}
 	}
 
